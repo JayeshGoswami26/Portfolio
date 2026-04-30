@@ -1,0 +1,58 @@
+# ----------------------------
+# Global ignores (root level)
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+
+
+# ----------------------------
+# Next.js app (jayesh)
+# ----------------------------
+
+# Dependencies
+portfolio_jayesh/node_modules/
+
+# Next.js build output
+portfolio_jayesh/.next/
+portfolio_jayesh/out/
+
+# Production build
+portfolio_jayesh/build/
+
+# Misc
+portfolio_jayesh/.turbo/
+portfolio_jayesh/.vercel/
+
+# TypeScript
+portfolio_jayesh/*.tsbuildinfo
+
+# Env files inside project
+portfolio_jayesh/.env.local
+portfolio_jayesh/.env.development.local
+portfolio_jayesh/.env.test.local
+portfolio_jayesh/.env.production.local
+
+# Cache
+portfolio_jayesh/.cache/
+
+# IDE stuff
+portfolio_jayesh/.vscode/
+portfolio_jayesh/.idea/
+
+# OS files inside project
+portfolio_jayesh/.DS_Store
+config.bat
+node_modules
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.env

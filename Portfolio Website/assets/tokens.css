@@ -1,0 +1,290 @@
+/* ============================================================
+   SHURIKEN PORTFOLIO — Colors & Type
+   ============================================================
+   Brand: Personal portfolio, ninja / shuriken motif.
+   Required brand colors: #000 (bg), #32216b (primary purple)
+   ============================================================ */
+
+/* --- FONTS ------------------------------------------------- */
+@font-face {
+  font-family: 'Shuriken';
+  src: url('fonts/TheLastShuriken.otf') format('opentype'),
+       url('fonts/TheLastShuriken.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Body + UI pairing — geometric sans with technical feel */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ============================================================
+   COLORS
+   ============================================================ */
+:root {
+  /* === REQUIRED BRAND === */
+  --ink-void:       #000000;  /* primary background */
+  --ink-blade:      #32216b;  /* primary purple */
+
+  /* === PURPLE SCALE (derived from #32216b) === */
+  --purple-50:      #e8e3f5;
+  --purple-100:     #c9bde6;
+  --purple-200:     #9f8cce;
+  --purple-300:     #745cb6;
+  --purple-400:     #4e3a93;
+  --purple-500:     #32216b;  /* = --ink-blade */
+  --purple-600:     #281a55;
+  --purple-700:     #1e1440;
+  --purple-800:     #140d2b;
+  --purple-900:     #0a0615;
+
+  /* === NEUTRALS (warm blacks, slightly desaturated) === */
+  --smoke-0:        #ffffff;
+  --smoke-50:       #f5f4f7;
+  --smoke-100:      #d8d6de;
+  --smoke-200:      #a8a5b0;
+  --smoke-300:      #706c78;
+  --smoke-400:      #4a4752;
+  --smoke-500:      #2a2832;
+  --smoke-600:      #1a1820;
+  --smoke-700:      #121016;
+  --smoke-800:      #0a080e;
+  --smoke-900:      #000000;
+
+  /* === ACCENTS === */
+  --blood:          #c8372d;  /* danger / hit marker */
+  --katana:         #c9bde6;  /* soft lavender highlight */
+  --gold:           #d4a84b;  /* accent / honor */
+  --mist:           #6a5b9a;  /* muted purple for secondary ui */
+
+  /* === SEMANTIC TOKENS === */
+  --bg:             var(--ink-void);
+  --bg-raised:      var(--smoke-700);
+  --bg-sunken:      var(--smoke-800);
+  --bg-overlay:     rgba(10, 6, 21, 0.72);
+
+  --fg:             var(--smoke-0);
+  --fg-muted:       var(--smoke-200);
+  --fg-faint:       var(--smoke-300);
+  --fg-inverse:     var(--ink-void);
+
+  --primary:        var(--ink-blade);
+  --primary-hover:  var(--purple-400);
+  --primary-press:  var(--purple-600);
+  --on-primary:     var(--smoke-0);
+
+  --border:         rgba(255, 255, 255, 0.08);
+  --border-strong:  rgba(255, 255, 255, 0.18);
+  --border-primary: var(--purple-400);
+
+  --focus-ring:     var(--katana);
+
+  --success:        #4a9b6e;
+  --warning:        var(--gold);
+  --danger:         var(--blood);
+}
+
+/* ============================================================
+   TYPOGRAPHY — base scale
+   ============================================================ */
+:root {
+  --font-display:   'Shuriken', 'Impact', sans-serif;
+  --font-sans:      'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono:      'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --fs-xs:          12px;
+  --fs-sm:          14px;
+  --fs-base:        16px;
+  --fs-md:          18px;
+  --fs-lg:          22px;
+  --fs-xl:          28px;
+  --fs-2xl:         36px;
+  --fs-3xl:         48px;
+  --fs-4xl:         72px;
+  --fs-5xl:         112px;
+  --fs-6xl:         180px;
+
+  --lh-tight:       1.02;
+  --lh-snug:        1.2;
+  --lh-normal:      1.5;
+  --lh-loose:       1.7;
+
+  --ls-tight:       -0.02em;
+  --ls-normal:      0;
+  --ls-wide:        0.08em;
+  --ls-widest:      0.24em;
+
+  --fw-light:       300;
+  --fw-regular:     400;
+  --fw-medium:      500;
+  --fw-semibold:    600;
+  --fw-bold:        700;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   ============================================================ */
+
+/* Display: The Last Shuriken — use SPARINGLY. Titles, hero, brand. */
+.t-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-6xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-normal);
+  text-transform: uppercase;
+}
+.t-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-5xl);
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+}
+.t-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+}
+
+/* Everything h2-down is sans — keep Shuriken for impact only */
+.t-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+.t-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+.t-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+}
+.t-h5 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+}
+
+.t-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  line-height: var(--lh-loose);
+  color: var(--fg-muted);
+}
+.t-body-lg {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  color: var(--fg-muted);
+}
+.t-body-sm {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--fg-muted);
+}
+
+/* Eyebrow — wide-tracked mono label, very signature to this brand */
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--purple-200);
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+}
+
+.t-code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--smoke-700);
+  color: var(--katana);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.t-caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+/* ============================================================
+   SPACING / RADII / SHADOWS
+   ============================================================ */
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 144px;
+
+  /* Corners — soft & generous (Tailwind 3xl = 24px as the default) */
+  --radius-none:  0px;
+  --radius-sm:    8px;
+  --radius-md:    16px;
+  --radius-lg:    24px;   /* 3xl — default for cards & surfaces */
+  --radius-xl:    32px;   /* 4xl — hero & feature cards */
+  --radius-2xl:   48px;   /* oversized editorial blocks */
+  --radius-pill:  999px;
+
+  /* Shadows — purple-tinted glow rather than drop-shadow */
+  --glow-sm:  0 0 0 1px rgba(201, 189, 230, 0.08), 0 4px 20px -4px rgba(50, 33, 107, 0.4);
+  --glow-md:  0 0 0 1px rgba(201, 189, 230, 0.12), 0 12px 40px -8px rgba(50, 33, 107, 0.55);
+  --glow-lg:  0 0 0 1px rgba(201, 189, 230, 0.18), 0 24px 60px -12px rgba(50, 33, 107, 0.65);
+  --glow-primary: 0 0 30px rgba(116, 92, 182, 0.45);
+  --inset-hi:  inset 0 1px 0 rgba(255,255,255,0.06);
+  --inset-lo:  inset 0 -1px 0 rgba(0,0,0,0.5);
+
+  /* Timing */
+  --ease-out:      cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-strike:   cubic-bezier(0.7, 0, 0.2, 1);     /* fast-in, slow-out — like a blade landing */
+  --ease-in-out:   cubic-bezier(0.6, 0, 0.4, 1);
+  --dur-fast:      120ms;
+  --dur-base:      220ms;
+  --dur-slow:      420ms;
+}
+
+/* ============================================================
+   BASELINE ELEMENT STYLES (opt-in via .proto-reset on parent)
+   ============================================================ */
+.proto-reset {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.proto-reset h1 { font-family: var(--font-display); font-size: var(--fs-4xl); line-height: var(--lh-tight); text-transform: uppercase; margin: 0 0 var(--space-5); color: var(--fg); }
+.proto-reset h2 { font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-3xl); line-height: var(--lh-snug); letter-spacing: -0.02em; margin: 0 0 var(--space-4); color: var(--fg); }
+.proto-reset h3 { font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-2xl); line-height: var(--lh-snug); margin: 0 0 var(--space-4); color: var(--fg); }
+.proto-reset p  { margin: 0 0 var(--space-4); color: var(--fg-muted); line-height: var(--lh-loose); }
+.proto-reset a  { color: var(--katana); text-decoration: none; border-bottom: 1px solid var(--border-strong); transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
+.proto-reset a:hover { color: var(--smoke-0); border-bottom-color: var(--katana); }
+.proto-reset code { font-family: var(--font-mono); font-size: 0.92em; background: var(--smoke-700); color: var(--katana); padding: 2px 6px; border-radius: 4px; }
+.proto-reset hr { border: 0; border-top: 1px solid var(--border); margin: var(--space-6) 0; }
